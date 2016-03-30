@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		270926D31CAC120000A9090D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 270926D21CAC120000A9090D /* main.c */; };
+		270926DE1CAC126000A9090D /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 270926DD1CAC126000A9090D /* makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		270926CF1CAC120000A9090D /* teensy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = teensy; sourceTree = BUILT_PRODUCTS_DIR; };
 		270926D21CAC120000A9090D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		270926DD1CAC126000A9090D /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		270926DF1CAC127000A9090D /* teensy.ld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teensy.ld; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,29 @@
 			isa = PBXGroup;
 			children = (
 				270926D21CAC120000A9090D /* main.c */,
+				270926DD1CAC126000A9090D /* makefile */,
+				270926DF1CAC127000A9090D /* teensy.ld */,
 			);
 			path = teensy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		270926D91CAC121D00A9090D /* teensy-gcc */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 270926DA1CAC121D00A9090D /* Build configuration list for PBXLegacyTarget "teensy-gcc" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = "teensy-gcc";
+			passBuildSettingsInEnvironment = 1;
+			productName = "teensy-gcc";
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		270926CE1CAC120000A9090D /* teensy */ = {
@@ -94,6 +115,9 @@
 					270926CE1CAC120000A9090D = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					270926D91CAC121D00A9090D = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = 270926CA1CAC120000A9090D /* Build configuration list for PBXProject "teensy" */;
@@ -109,6 +133,7 @@
 			projectRoot = "";
 			targets = (
 				270926CE1CAC120000A9090D /* teensy */,
+				270926D91CAC121D00A9090D /* teensy-gcc */,
 			);
 		};
 /* End PBXProject section */
@@ -118,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270926DE1CAC126000A9090D /* makefile in Sources */,
 				270926D31CAC120000A9090D /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +246,29 @@
 			};
 			name = Release;
 		};
+		270926DB1CAC121D00A9090D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		270926DC1CAC121D00A9090D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -237,6 +286,14 @@
 			buildConfigurations = (
 				270926D71CAC120000A9090D /* Debug */,
 				270926D81CAC120000A9090D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		270926DA1CAC121D00A9090D /* Build configuration list for PBXLegacyTarget "teensy-gcc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270926DB1CAC121D00A9090D /* Debug */,
+				270926DC1CAC121D00A9090D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

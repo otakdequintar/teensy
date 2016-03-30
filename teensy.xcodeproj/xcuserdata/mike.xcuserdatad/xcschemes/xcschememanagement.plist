@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>teensy-gcc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>teensy.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>270926CE1CAC120000A9090D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>270926D91CAC121D00A9090D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
